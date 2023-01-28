@@ -34,6 +34,7 @@ class ArrayX
       public void displayEvenDivisibleByfive()
       {
           int iCnt=0;
+            
           for(iCnt=0;iCnt<Arr.length;iCnt++)
           {
             if((Arr[iCnt] % 5==0) && (Arr[iCnt]%2==0))
