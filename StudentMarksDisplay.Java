@@ -28,7 +28,7 @@
         {
             if((arr[iCnt]>=77.5) &&(arr[iCnt]<=100))
             {
-                System.out.println("First Class With Distinction");
+                System.out.println(arr[iCnt]+"    First Class With Distinction");
             }
             else if((arr[iCnt]>=70.0) &&(arr[iCnt]<=77.5))
             {
