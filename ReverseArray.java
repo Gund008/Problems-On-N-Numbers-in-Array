@@ -1,77 +1,56 @@
-import java.util.Scanner;
+/* 
+Write a Java Program which Accept two arrays from user and  copy the contents of that Array into another array in reverse order and return new array.
 
-class ArrayX
-{
-  protected int Arr[];
+ */
 
-  public ArrayX(int iSize)
-  {
-      Arr=new int[iSize];
-  }
-
- protected void accept()
-  {
-    Scanner sobj=new Scanner(System.in);
-
-    for(int iCnt=0;iCnt<Arr.length;iCnt++)
+ import java.util.*;
+ class MyArrayX
+ {
+    public int copyContents(int Arr[],int Brr[])
     {
-      System.out.println("Please Enter the:"+(iCnt+1));
-      Arr[iCnt]=sobj.nextInt();
+        int iRet=0;
+        for(int iCnt=0;iCnt<Arr.length;iCnt++)
+        {
+          Brr[iCnt]=Arr[iCnt];
+        }
+        for(int iCnt=Brr.length-1;iCnt>=0;iCnt--)
+        {
+          iRet=Brr[iCnt];
+        }
+        return iRet;
     }
-  }
-
-  protected void display()
-  {
-     System.out.println("Elements of Array are:");
-
-     for(int iCnt=0;iCnt<Arr.length;iCnt++)
-     {
-       System.out.print(Arr[iCnt]+"\t");
-     }
-     System.out.println();
-  }
-}
-
-class MarvellousX extends ArrayX
-{
-  public MarvellousX(int iSize)
-    {
-       super(iSize);
-    }
-  public void Reverse()
-   {
-      int iStart=0;
-      int iEnd=Arr.length-1;
-      int iTemp=0;
+ }
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
-    while(iStart<iEnd)
+  class PP
+   {
+    public static void main(String arg[]) 
     {
-      iTemp=Arr[iStart];
-      Arr[iStart]=Arr[iEnd];
-      Arr[iEnd]=iTemp;
-
-      iStart++;
-      iEnd--;
+       MyArrayX mobj=new MyArrayX();
+ 
+       Scanner sobj= new Scanner(System.in);
+       
+       System.out.println("Please Enter the First Array Size:");
+       int iNo1=sobj.nextInt();
+ 
+       int Arr[]=new int[iNo1];
+ 
+       int Brr[]=new int[iNo1];
+ 
+       System.out.println("Original Array:");
+ 
+       for(int iCnt=0;iCnt<Arr.length;iCnt++)
+       {
+            Arr[iCnt]=sobj.nextInt();
+       }
+       
+       int iRet=mobj.copyContents(Arr,Brr);
+       System.out.println("Copied Array:");
+ 
+       for(int j=Brr.length-1;j>=0;j--)
+       {
+         System.out.print(Brr[j]+"\t");
+       }
+       System.out.print("");
     }
   }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-class Program2
-{
- public static void main(String[] args)
-  {
-     Scanner sobj=new Scanner(System.in);
-     System.out.println("Please Enter the size of Array that You want to create:");
-     int iSize=sobj.nextInt();
-
-     MarvellousX aobj=new MarvellousX(iSize);
-     aobj.accept();
-     aobj.display();
-
-     aobj.Reverse();
-     System.out.println("Array After Reverse Opration:");
-     aobj.display();
-  }
-}
