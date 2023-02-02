@@ -32,11 +32,11 @@
             }
             else if((arr[iCnt]>=70.0) &&(arr[iCnt]<=77.5))
             {
-                System.out.println("First Class With Distinction");
+                System.out.println(arr[iCnt]+"     First Class With Distinction");
             }
             else if((arr[iCnt]>=60.0)&&(arr[iCnt]<=70.0))
             {
-                System.out.println("First Class");
+                System.out.println(arr[iCnt]+"     First Class");
             }
             else if((arr[iCnt]>=50.0)&&(arr[iCnt]<=60.0))
             {
