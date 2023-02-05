@@ -40,11 +40,11 @@
             }
             else if((arr[iCnt]>=50.0)&&(arr[iCnt]<=60.0))
             {
-                System.out.println("Second Class");
+                System.out.println(arr[iCnt]+"     Second Class");
             }
             else if((arr[iCnt]>=40.0)&&(arr[iCnt]<=50.0))
             {
-                System.out.println("Pass Class");
+                System.out.println(arr[iCnt]+"      Pass Class");
             }     
             else if((arr[iCnt]>=30.00)&&(arr[iCnt]<=35.0))
             {
