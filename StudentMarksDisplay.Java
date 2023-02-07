@@ -48,7 +48,7 @@
             }     
             else if((arr[iCnt]>=30.00)&&(arr[iCnt]<=35.0))
             {
-                System.out.println("Fail");
+                System.out.println(arr[iCnt]+"     Fail");
             }
             else
             {
